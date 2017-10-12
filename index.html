@@ -1,32 +1,52 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Historic ERU Deployments</title>
   <meta name="description" content="">
-
-  <link rel="canonical" href="/historiceru/">
-  <link rel="alternate" type="application/rss+xml" title="Go Project Lab" href="/feed.xml">
 
   <link rel="stylesheet" href="http://ifrcgo.org/assets/styles/main.css">
 
-  <link rel="author" type="text/plain" href="humans.txt" />
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
+<!-- EDIT FROM HERE -->
 
+  <title>Historic ERU Deployments</title>
 
-  <link rel="stylesheet" href="css/site.css" media="screen" type="text/css">
+  <!-- Tableau Script -->
+  <script type="text/javascript">
+  function initViz() {
+    var containerDiv = document.getElementById("vizContainer"),
+    url = "https://public.tableau.com/views/ERUdeploymentssince1996/Globalview",
+    options = {
+      hideTabs: true,
+      hideToolbar: false,
+      display_count: false,
+      showShareOptions: true,
+      showVizHome: false,
+      showAppBanner: false,
+      onFirstInteractive: function () {
+        console.log("Run this code when the viz has finished loading.");
+      }
+    };
 
-  <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Go Project Lab" />
+    var viz = new tableau.Viz(containerDiv, url, options);
+    // Create a viz object and embed it in the container div.
+  }
+  </script>
+
+<!-- STOP EDITING HERE, AND EDIT BREADCRUMB TITLE ON LINE 72 -->
+
 </head>
 
-<body>
+<body onload="initViz();">
   <!--[if lt IE 10]>
   <div id="nocando">
   <h1>No can do!</h1>
   <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-</div>
-<![endif]-->
+  </div>
+  <![endif]-->
 <!-- Start Top Bar -->
 <div class="top-bar medium-10">
   <div class="top-bar-left">
@@ -42,56 +62,27 @@
 </div>
 <!-- End Top Bar -->
 
-<nav aria-label="You are here:" role="navigation" class="row">
-
-  <ul class="breadcrumbs" vocab="http://schema.org/" typeof="BreadcrumbList">
-    <li><a href=/>Home</a></li>
-
-    <!-- Iteration breadcrumb item -->
-
-    <!-- Skip if root -->
-
-    <!-- Skip if root -->
-
-    <!-- Skip if language directory -->
-
-    <!-- Get breadcrumb title. Insert snippet from configuration description to translates breadcrumb if language plugin is installed and YAML subset is set -->
-
-    <!-- SEO data -->
-
-    <li class=" active" property="itemListElement" typeof="ListItem">
-
-      <span property="name">Historic Emergency Response Unit (ERU) Deployments</span>
-
-      <meta property="position" content="1" />
-    </li>
-  </ul>
-
-</nav>
-
 <div class="row medium-12 column">
-
-  
-  <div class='tableauPlaceholder' id='viz1507735542030' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;T3&#47;T35P5ZHWH&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='2' /> <param name='path' value='shared&#47;T35P5ZHWH' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;T3&#47;T35P5ZHWH&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='no' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1507735542030');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1174px';vizElement.style.height='1500px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
- </div> 
+  <div id="vizContainer"></div>
+</div>
 
 <footer>
-  <div class="row small-12 large-up-5">
-    <h6>The International Federation of Red Cross and Red Crescent Societies (IFRC) is the world's largest humanitarian organization, with 190 member National Societies. As part of the International Red Cross and Red Crescent Movement, our work is guided by seven fundamental principles; humanity, impartiality, neutrality, independence, voluntary service, unity and universality.</h6>
-  </div>
+    <div class="row small-12 large-up-5">
+      <h6>The International Federation of Red Cross and Red Crescent Societies (IFRC) is the world's largest humanitarian organization, with 190 member National Societies. As part of the International Red Cross and Red Crescent Movement, our work is guided by seven fundamental principles; humanity, impartiality, neutrality, independence, voluntary service, unity and universality.</h6>
+    </div>
 </footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-84297335-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+ga('create', 'UA-84297335-1', 'auto');
+ga('send', 'pageview');
+</script>
 
+</body>
+</html>
 
-  </body>
-  </html>
